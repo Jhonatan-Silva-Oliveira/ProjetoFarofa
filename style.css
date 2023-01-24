@@ -58,7 +58,7 @@ a{
   bottom: 0;
   width: 100%;
   position: absolute;
-  height: 38%;
+  height: 40%;
   background-image: url(./img/mesa-background.jpg);
   background-size: cover;
   background-position: center;
@@ -84,16 +84,19 @@ a{
   width: 100%;
 }
 .banner-foto-marco{
-  width: 550px;
+  overflow: hidden;
+  width: 50%;
+  min-width: 380px;
+  height: 400px;
   max-width: 700px;
   z-index: 1;
   position: absolute;
   top:50%;
   left:30%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -60%)
 }
 .banner-foto-marco .img-marco-desktop{
-  width: 100%;
+  width: 500px;
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -104,7 +107,7 @@ a{
   z-index: 100;
   position: absolute;
   top: 50%;
-  left: 70%;
+  left: 65%;
   transform: translate(-50%, -50%)
 }
 .banner-text h1{
@@ -333,15 +336,9 @@ footer a{
   }
 }
 @media screen and (max-width: 850px){
-  .range-bg-top{
-    height: 40%;
-  }
-  .range-bg-bottom{
-    height: 40%;
-    background-image: url(https://media.istockphoto.com/id/1285274376/pt/foto/t-bone-grilled-beef-steak.jpg?s=612x612&w=0&k=20&c=qqO27ak5Gu9pzSUTl2YWH2V8JiaI7zMLRZNJKybCikU=);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  
+  .banner-foto-marco .img-marco-desktop{
+    width: 100%;
   }
   .banner-text{
     width: 250px
@@ -351,7 +348,7 @@ footer a{
   }
   .banner-text ul{
     display: flex;
-    gap: 1rem;
+    gap: 1.4rem;
     overflow: hidden;
     width: 250px;
   }
@@ -427,15 +424,30 @@ footer a{
 
 @media screen and (max-width: 475px){
   .content-img img{
-    max-width: 300px;
+    max-width: 270px;
   }
   .content .content-farofa h2{
-    padding-right: 60px;
+    padding: 10px 60px 0 0;
+  }
+  .content .content-farofa>p{
+    padding: 0;
+  }
+  .content .content-farofa h3{
+    padding: 0;
   }
   .banner-foto-marco{
-    width: 425px;
+    width: 360px;
+    min-width: 300px;
   }
   .banner-text{
-    left: 65%;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -35%)
+  }
+  .nav-img{
+    padding: 5px 0;
+  }
+  .section-footer>.text-container{
+    padding: 0;
   }
 }
