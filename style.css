@@ -108,7 +108,7 @@ a{
   position: absolute;
   top: 50%;
   left: 65%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -200%)
 }
 .banner-text h1{
   font-size: 4rem;
@@ -116,12 +116,12 @@ a{
   text-shadow: 2px 2px 3px #6e0000;
 }
 .banner-text ul{
+  position: relative;
   display: flex;
-  overflow: hidden;
   width: 20.938rem;
+  z-index: 9999;
 }
 .banner-text ul li:first-child{
-  padding-right: 4.3rem;
   color: rgb(243, 239, 7);
   text-shadow: 2px 2px 3px #cc2b03;
 }
@@ -130,53 +130,43 @@ a{
   text-shadow: 2px 2px 3px rgb(247, 242, 0);
 }
 .banner-text ul li{
+  position: absolute;
   font-weight: bold;
   text-transform: uppercase;
   list-style-type: none;
-  color: #733e31;
   font-size: 3rem;
-  animation: anime-titulo 7s ease-in-out infinite alternate;
+  
 }
-.banner-text .list-img li img{
+.banner-text ul li img{
   max-width: 20.625rem;
 }
+.banner-text ul .img-farofa-tradicional{
+  animation: anime-farofa-tradicional 8s ease-in-out infinite alternate;
+  transform: scale(0);
+  opacity: 0;
+}
+@keyframes anime-farofa-tradicional {
+  0% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
-@keyframes anime-titulo {
-  from{
-    transform: translateX(0);
-  } 
-  10% {
-    transform: translateX(0);
+.banner-text ul .img-farofa-apimentada{
+  animation: anime-farofa-apimentada 8s ease-in-out infinite alternate;
+}
+@keyframes anime-farofa-apimentada {
+  0% {
+    transform: scale(1);
+    opacity: 1;
   }
-  20% {
-    transform: translateX(0);
-  }
-  30% {
-    transform: translateX(0);
-  }
-  40% {
-    transform: translateX(0);
-  }
-  45%{
-    transform: translateX(1.25rem);
-  }
-  55% {
-    transform: translateX(-25.625rem);
-  }
-  60% {
-    transform: translateX(-24.375rem);
-  }
-  70% {
-    transform: translateX(-24.375rem);
-  }
-  80% {
-    transform: translateX(-24.375rem);
-  }
-  90% {
-    transform: translateX(-24.375rem);
-  }
-  to {
-    transform: translateX(-24.375rem);
+  100% {
+    transform: scale(.5);
+    opacity: 0;
   }
 }
 
@@ -359,56 +349,12 @@ iframe{
   }
   .banner-text ul{
     display: flex;
-    overflow: hidden;
     width: 15.625rem;
   }
   .banner-text ul li{
     font-size: 2.2rem;
-    animation: anime-titulo 7s ease-in-out infinite alternate;
   }
-  /* .banner-text ul li:first-child{
-    padding-right: 1.3rem;
-  } */
-  @keyframes anime-titulo {
-    from{
-      transform: translateX(0);
-    } 
-    10% {
-      transform: translateX(0);
-    }
-    20% {
-      transform: translateX(0);
-    }
-    30% {
-      transform: translateX(0);
-    }
-    40% {
-      transform: translateX(0);
-    }
-    45%{
-      transform: translateX(1.25rem);
-    }
-    55% {
-      transform: translateX(-20.625rem);
-    }
-    60% {
-      transform: translateX(-19.375rem);
-    }
-    70% {
-      transform: translateX(-19.375rem);
-    }
-    80% {
-      transform: translateX(-19.375rem);
-    }
-    90% {
-      transform: translateX(-19.375rem);
-    }
-    to {
-      transform: translateX(-19.375rem);
-    }
-  }
-  
-  .banner-text .list-img li img{
+  .banner-text ul li img{
     max-width: 15rem;
   }
   .content-img{
@@ -460,7 +406,7 @@ iframe{
   .banner-text{
     top: 50%;
     left: 55%;
-    transform: translate(-50%, -35%)
+    transform: translate(-50%, -250%)
   }
   .nav-img{
     padding: 0.313rem 0;
